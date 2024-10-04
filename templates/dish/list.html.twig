@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Dish List</h1>
+
+<ul>
+    {% for dish in dishes %}
+        <li>{{ dish.name }} - {{ dish.ingredients }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ path('dish_new') }}">Add New Dish</a>
+{% endblock %}
